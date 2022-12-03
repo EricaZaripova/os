@@ -29,9 +29,9 @@ int sort_by_name(const void *a, const void *b) {
 
 void sort_files(struct File *files, int sort_int) {
         if (sort_int == 1) {
-                qsort (files, FILE_COUNTER, sizeof(struct File), sort_by_name);
-        } else if (sort_int == 2) {
                 qsort (files, FILE_COUNTER, sizeof(struct File), sort_by_size);
+        } else if (sort_int == 2) {
+                qsort (files, FILE_COUNTER, sizeof(struct File), sort_by_name);
         }
 }
 
