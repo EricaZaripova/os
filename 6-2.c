@@ -19,14 +19,13 @@ void get_time(char* into_string)
 void print_pids(int flag)
 {
     pid_t pid = getpid();
-    printf("%d", pid);
     char time_string[200];
     if (pid != flag)
     {
         get_time(time_string);
-        printf("This is a child process pid: %d time: %s\n", getpid(), time_string);
+        printf("This is a child process pid: %d time: %s\n\n", getpid(), time_string);
         get_time(time_string);
-        printf("This is a child process parent pid: %d\n time: %s\n\n", getppid(), time_string);
+        printf("This is a child process parent pid: %d time: %s\n\n", getppid(), time_string);
     }
     else
     {
