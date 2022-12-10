@@ -55,13 +55,13 @@ int main()
     while (should_continue)
     {
         char command[200];
+        fgets(command, 200, stdin);
+        
         char* argv[100];
-
         char* part = strtok(command, " \n");
 
-        fgets(command, 200, stdin);
-
-        for (int i = 0; part != NULL; i++)
+        int i;
+        for (i = 0; part != NULL; i++)
         {
             argv[i] = part;
             part = strtok(NULL, " \n");
